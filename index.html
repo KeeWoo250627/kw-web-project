@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4285f4">
+    <link rel="manifest" href="manifest.json">
+    <title>韩语单词学习</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="word-container">
+        <span id="korean-word">안녕하세요</span>
+        <span id="chinese-meaning" style="display: none;">你好</span>
+    </div>
+    
+    <div id="button-container">
+        <button onclick="showChinese()">显示中文</button>
+        <button onclick="nextWord()">下一个</button>
+        <button onclick="randomWord()">随机一个</button>
+        <button onclick="favoriteWord()">收藏</button>
+        <button onclick="showFavoriteList()">收藏列表</button>
+    </div>
+
+    <div id="filter-container">
+        <select id="word-filter" onchange="filterWords()">
+            <option value="all">全部</option>
+            <option value="favorite">收藏列表</option>
+            <option value="easy">简单</option>
+            <option value="medium">中等</option>
+            <option value="hard">高级</option>
+        </select>
+    </div>
+
+    <div id="favorite-list" style="display: none;"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
